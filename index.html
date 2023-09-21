@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENU</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<p>Move mouse over file button to open sub menu</p>
+    
+<div id="menu">
+    <ul>
+        <li id="file">File</li>
+    </ul>
+</div>
+
+<div id="altmenu1">
+    <ul>
+        <li>New Text File</li>
+        <li>New File</li>
+        <li>New Window</li>
+        <li>Open File</li>
+        <li>Open Folder</li>
+        
+    </ul>
+</div>
+
+</body>
+
+<script>
+
+
+document.getElementById("file").addEventListener("mouseover", function() {
+document.getElementById("altmenu1").classList.toggle("openme");
+});
+
+document.getElementById("altmenu1").addEventListener("mouseleave", function() {
+document.getElementById("altmenu1").classList.toggle("openme");
+})
+
+document.getElementById("menu").addEventListener("mouseleave", function() {
+document.getElementById("altmenu1").classList.toggle("openme");
+})
+
+</script>
+
+</html>
